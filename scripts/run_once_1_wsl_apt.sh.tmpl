@@ -1,0 +1,8 @@
+{{ if and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+#!/bin/sh
+
+# packages/wsl_apt.txt hash: {{ include "packages/wsl_apt.txt" | sha256sum }}
+echo "wsl detected"
+echo {{ joinPath .chezmoi.sourceDir "packages/wsl_apt.txt" | quote }}
+
+{{ end -}}

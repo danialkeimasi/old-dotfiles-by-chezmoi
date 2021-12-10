@@ -3,11 +3,12 @@ export PATH="/home/$USER/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 # export PATH=":$PATH"
 
-export DF="$HOME/.local/share/chezmoi"
-
 # aliases and functions
 alias l='ls -CF'
 alias myip="curl ifconfig.io/country_code"
+alias q="cd ~/Desktop/quera"
+alias qne="cd ~/Desktop/quera/front/next"
+alias qna="cd ~/Desktop/quera/front/navbar"
 
 proxy(){
     export http_proxy=http://127.0.0.1:8118;
@@ -36,19 +37,6 @@ qstatus() {
 
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
-}
-
-# antlr4
-export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
-alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
-ag() {
-    echo "> running antlr4..."
-    antlr4 $1.g4
-    echo "> compiling java files..."
-    javac $1*.java
-    echo "> running grun..."
-    cat $2 | grun $1 $1 -gui
 }
 
 # pyenv

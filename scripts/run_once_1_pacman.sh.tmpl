@@ -1,0 +1,7 @@
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
+#!/bin/sh
+
+# packages/pacman.txt hash: {{ include "packages/pacman.txt" | sha256sum }}
+sudo pacman -S --needed - < {{ joinPath .chezmoi.sourceDir "packages/pacman.txt" | quote }}
+
+{{ end -}}

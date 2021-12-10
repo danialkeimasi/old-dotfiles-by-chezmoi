@@ -1,0 +1,7 @@
+nvm
+visual-studio-code-bin
+google-chrome
+chrome-gnome-shell
+auto-cpufreq-git
+xcursor-oxygen
+skypeforlinux-stable-bin

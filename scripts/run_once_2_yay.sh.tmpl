@@ -1,0 +1,7 @@
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
+#!/bin/sh
+
+# packages/yay.txt hash: {{ include "packages/yay.txt" | sha256sum }}
+# yay -S - < {{ joinPath .chezmoi.sourceDir "packages/yay.txt" | quote }}
+
+{{ end -}}

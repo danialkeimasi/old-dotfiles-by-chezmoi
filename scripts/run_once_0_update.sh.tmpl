@@ -1,0 +1,13 @@
+#!/bin/sh
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
+
+sudo pacman -Syu
+
+{{- end }}
+
+
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "debian") -}}
+
+sudo apt update && sudo apt upgrade
+
+{{- end }}

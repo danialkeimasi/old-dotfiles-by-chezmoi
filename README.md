@@ -21,10 +21,6 @@ Update `/etc/hosts`:
 
 - mypp
 
-Install Packages:
-
-- `$DF/scripts/packages/.sh`
-
 # TODO
 
 - [ ] add .vimrc

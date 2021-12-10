@@ -1,4 +1,4 @@
-scripts/
+packages/
 .env
 .env.example
 README.md

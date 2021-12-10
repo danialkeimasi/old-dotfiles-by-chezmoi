@@ -1,0 +1,16 @@
+#!/bin/sh
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
+
+sudo pacman -S --needed git base-devel openssl zlib xz
+
+{{- end }}
+
+
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "debian") -}}
+
+sudo apt install -y git libedit-dev libncurses5-dev
+
+{{- end }}
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
