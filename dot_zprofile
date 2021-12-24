@@ -7,8 +7,8 @@ export PATH="$HOME/bin:$PATH"
 alias l='ls -CF'
 alias myip="curl ifconfig.io/country_code"
 alias q="cd ~/Desktop/quera"
-alias qne="cd ~/Desktop/quera/front/next"
-alias qna="cd ~/Desktop/quera/front/navbar"
+alias qf="cd ~/Desktop/quera/front/next"
+alias qfn="cd ~/Desktop/quera/front/navbar"
 
 proxy(){
     export http_proxy=http://127.0.0.1:8118;

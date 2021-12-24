@@ -1,5 +1,8 @@
 {{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
 #!/bin/sh
+echo "Installing pacman packages ..."
+read -p "Continue? [y/N]: " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 0
+
 
 # packages/pacman.txt hash: {{ include "packages/pacman.txt" | sha256sum }}
 sudo pacman -S --needed - < {{ joinPath .chezmoi.sourceDir "packages/pacman.txt" | quote }}

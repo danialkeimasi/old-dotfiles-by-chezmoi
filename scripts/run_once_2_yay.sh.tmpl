@@ -1,5 +1,8 @@
 {{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.idLike "arch") -}}
 #!/bin/sh
+echo "Installing yay packages ..."
+read -p "Continue? [y/N]: " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 0
+
 
 # packages/yay.txt hash: {{ include "packages/yay.txt" | sha256sum }}
 # yay -S - < {{ joinPath .chezmoi.sourceDir "packages/yay.txt" | quote }}
