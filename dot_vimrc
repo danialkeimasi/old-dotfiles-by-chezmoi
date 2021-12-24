@@ -1,0 +1,99 @@
+""""""""""""""""""""""""""""""""
+"           Packages           "
+""""""""""""""""""""""""""""""""
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" My Plugins
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'joshdick/onedark.vim'
+Bundle 'sonph/onehalf', {'rtp': 'vim/'}
+
+call vundle#end()            " required, Plugins must be added before this line
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+""""""""""""""""""""""""""""""""
+"           Settings           "
+""""""""""""""""""""""""""""""""
+
+" Press jk to go to Normal mode
+" source: https://github.com/Valloric/YouCompleteMe#i-get-weird-errors-when-i-press-ctrl-c-in-vim
+inoremap jk <Esc>
+
+"" Fn Keys
+" F5  -> toggle paste mode
+" F6  -> switch color scheme
+" F7  ->
+" F8  -> prev tab
+" F9  -> next tab
+
+" toggles vim's paste mode; when we want to paste something into vim from a
+" different application, turning on paste mode prevents the insertion of extra
+" whitespace
+set pastetoggle=<F5>
+
+" map <F8> and <F9> keys to 'prev tab' and 'next tab'
+:nnoremap <F8> :tabprevious<CR>
+:nnoremap <F9> :tabnext<CR>
+:inoremap <F8> <Esc>:tabprevious<CR>i
+:inoremap <F9> <Esc>:tabnext<CR>i
+
+" Search Settings
+set hlsearch       " highlight searches
+set ignorecase     " ignore case of searches
+set smartcase      " but become case sensitive if you type uppercase characters
+set incsearch      " highlight dynamically as pattern is typed
+
+" Editor Settings
+set tabstop=4      " size of a hard tabstop (number of spaces a tab counts for)
+set shiftwidth=4   " size of an 'indent' (spaces for autoindents)
+set softtabstop=4  " a combination of spaces and tabs are used to simulate tab stops at a width other than the (hard)tabstop
+set expandtab      " always uses spaces instead of tab characters
+set number         " show line numbers
+set cursorline     " highlight current line
+set scrolloff=3    " Start scrolling three lines before the horizontal window border
+set noshowmode     " don't show the mode ("-- INSERT --") at the bottom
+
+
+""""""""""""""""""""""""""""""""
+"        Misc. Settings        "
+""""""""""""""""""""""""""""""""
+set t_Co=256          " Enable 256 colors, for Color Scheme and Vim-Airline
+set history=1000      " remember more commands and search history
+set undolevels=1000   " use many levels of undo
+
+
+""""""""""""""""""""""""""""""""
+"     Color Scheme Settings    "
+""""""""""""""""""""""""""""""""
+syntax enable
+colorscheme onedark
+
+
+""""""""""""""""""""""""""""""""
+"     Vim-Airline Settings     "
+""""""""""""""""""""""""""""""""
+set laststatus=2                   " appear airline all the time
+let g:airline_powerline_fonts = 1  " set powerline fonts for airline
+let g:airline_theme='onedark'

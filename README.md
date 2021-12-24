@@ -23,9 +23,6 @@ Update `/etc/hosts`:
 
 # TODO
 
-- [ ] add .vimrc
 - [ ] add services
 - [ ] add packages used in both arch and ubuntu
-- [ ] pyenv, poetry installation
-- [ ] nvm, npm, node installation
 - [ ] script for flatpak packages
