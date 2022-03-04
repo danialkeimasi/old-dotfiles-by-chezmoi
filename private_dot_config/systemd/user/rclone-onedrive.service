@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount OneDrive using rclone
+AssertPathIsDirectory=%h/OneDrive
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount --config=%h/.config/rclone/rclone.conf --vfs-cache-mode writes onedrive: %h/OneDrive
+ExecStop=/bin/fusermount -u %h/OneDrive
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
