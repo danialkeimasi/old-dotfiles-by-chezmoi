@@ -42,3 +42,6 @@ ExecStart=/usr/bin/setkeycodes 72 88
 [Install]
 WantedBy=multi-user.target
 ```
+
+# Touchpad
+- Turn off `apz.gtk.kinetic_scroll.enabled` in firefox.
