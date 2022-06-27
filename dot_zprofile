@@ -6,10 +6,13 @@ export PATH="$HOME/bin:$PATH"
 # aliases and functions
 alias l='ls -CF'
 alias myip="curl ifconfig.io/country_code"
-alias q="cd ~/Desktop/quera"
-alias qf="cd ~/Desktop/quera/front/next"
-alias qfn="cd ~/Desktop/quera/front/navbar"
-alias qr="cd ~/Desktop/quera/react"
+
+export QUERA_ROOT="$HOME/Desktop/repos/quera/quera"
+
+alias q="cd $QUERA_ROOT"
+alias qf="cd $QUERA_ROOT/front/next"
+alias qfn="cd $QUERA_ROOT/front/navbar"
+alias qr="cd $QUERA_ROOT/react"
 
 proxy(){
     export http_proxy=http://127.0.0.1:8118;
