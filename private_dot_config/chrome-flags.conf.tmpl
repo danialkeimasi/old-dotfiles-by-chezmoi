@@ -1,4 +1,6 @@
+{{ if eq .chezmoi.hostname "danial-rb" -}}
 --enable-features=UseOzonePlatform
 --ozone-platform=wayland
+{{ end -}}
 --enable-features=VaapiVideoDecoder
 --force-dark-mode

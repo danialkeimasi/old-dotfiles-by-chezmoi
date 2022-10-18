@@ -1,7 +1,7 @@
 nvm
 visual-studio-code-bin
 google-chrome
-chrome-gnome-shell
-auto-cpufreq-git
+gnome-browser-connector
 xcursor-oxygen
-skypeforlinux-stable-bin
+adw-gtk3
+onedrive-abraunegg

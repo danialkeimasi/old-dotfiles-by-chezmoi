@@ -2,26 +2,23 @@ git
 github-cli
 htop
 tmux
-screen
 terminator
 zsh
-bat
 vim
-tlp
-tlp-rdw
 flatpak
 redis
 postgresql
 dbeaver
-pipewire
-libpipewire02
-networkmanager-openvpn
 mosh
-vlc
 hplip
-bluez
-blueman
 qbittorrent
 libreoffice
 dconf
-base
+python-pipx
+net-tools
+ttf-cascadia-code
+nodejs-lts-gallium
+
+{{ if eq .chezmoi.hostname "danial-mpc" -}}
+qbittorrent-nox
+{{ end -}}
