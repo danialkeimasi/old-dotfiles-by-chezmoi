@@ -7,7 +7,7 @@ export PATH="$HOME/bin:$PATH"
 alias l='ls -CF'
 alias myip="curl ifconfig.io/country_code"
 
-export QUERA_ROOT="$HOME/Desktop/repos/quera/quera"
+export QUERA_ROOT="$HOME/Repositories/quera/quera"
 
 alias q="cd $QUERA_ROOT"
 alias qf="cd $QUERA_ROOT/front/next"
